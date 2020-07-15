@@ -15,14 +15,14 @@ class TodoItems extends Component {
     delete(key) {
         this.props.delete(key);
     }
-    mudarStatus(status){
-        this.props.mudarStatus(status);
+    mudarStatus(key){
+        this.props.mudarStatus(key);
         
     }
 
-    alterar(text)
+    alterar(key)
     {
-        this.props.alterar(text);    
+        this.props.alterar(key);    
     }
     render() {
         return (
@@ -58,8 +58,8 @@ class TodoItems extends Component {
                             <td>  {this.props.lista.map((item) => {
                                 return (
                                     <p>
-                                        <a className="botao" onClick={()=>this.mudarStatus(item.status)}>Resolvido</a>
-                                        <a className="botao" onClick={()=>this.alterar(item.text)}>Alterar</a>
+                                        <a className="botao" onClick={()=>this.mudarStatus(item.key)}>Resolvido</a>
+                                        <a className="botao" onClick={()=>this.alterar(item.key)}>Alterar</a>
                                         <a className="botao" onClick={() => this.delete(item.key)}>Deletar</a>
                                     </p>
 

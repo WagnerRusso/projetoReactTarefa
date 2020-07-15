@@ -40,15 +40,26 @@ class TodoList extends Component {
         this.setState({ items: filtro });
     }
 
-    mudarStatus(status){
-       
+    mudarStatus(key){
         
-        this.setState({status: 'Resolvido'});
-        console.log(status)
-        
+       let filtro = this.state.items.filter((item)=>{
+           if(item.key === key){
+
+               return(item.status ="Resolvido");
+           }
+       });
+        this.setState({item: filtro});  
     }
-    alterar(text){
-        console.log(text);
+
+    alterar(key){
+        let filtro = this.state.items.filter((item)=>{
+               if(item.key === key){
+
+                   let teste = item.text;
+                   console.log(teste);
+                   return (item.text);
+               }
+        });
     }
 
     render() {
