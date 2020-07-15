@@ -1,0 +1,22 @@
+th,td,td{
+    border: 1px solid black;
+}
+
+.botao{
+    width: 150px;
+    background-color: #fff;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: none;
+    cursor: pointer;
+    padding:5px
+}
+
+.botao:hover{
+    opacity: 0.7;
+    color: #4c89e3;
+    transition: all 0.50s;
+}
+
